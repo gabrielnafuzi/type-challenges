@@ -1,4 +1,4 @@
-namespace U {
+export namespace U {
   export type Num<T> = Extract<T, number>
 
   export type Push<T extends any[], Val> = [...T, Val]
@@ -22,7 +22,9 @@ namespace U {
 
   export type Comparator<N1 extends number, N2 extends number> = N1 extends N2
     ? false
-    : [U.Sub<N2, N1>] extends [never]
+    : [Sub<N2, N1>] extends [never]
     ? true
     : false
+
+  export type IsNever<T> = [T] extends [never] ? true : false
 }

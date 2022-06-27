@@ -1,3 +1,5 @@
+import type { U } from '@/utils'
+
 export type NumberRange<
   L extends number,
   H extends number,

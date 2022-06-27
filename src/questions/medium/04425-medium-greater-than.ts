@@ -1,3 +1,5 @@
+import type { U } from '@/utils'
+
 export type GreaterThan<N1 extends number, N2 extends number> = N1 extends N2
   ? false
   : [U.Sub<N2, N1>] extends [never]

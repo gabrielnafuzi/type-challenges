@@ -1,3 +1,5 @@
+import type { U } from '@/utils'
+
 type GetNumber<T> = T extends number[] ? T[number] : T
 
 export type Without<

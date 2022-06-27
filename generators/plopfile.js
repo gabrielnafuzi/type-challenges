@@ -11,12 +11,18 @@ module.exports = plop => {
         type: 'input',
         name: 'typeName',
         message: 'question Type name'
+      },
+      {
+        name: 'questionLevel',
+        message: 'question level',
+        type: 'list',
+        choices: ['easy', 'medium', 'hard', 'extreme']
       }
     ],
     actions: [
       {
         type: 'add',
-        path: '../questions/{{questionName}}/index.ts',
+        path: '../src/questions/{{questionLevel}}/{{questionName}}.ts',
         templateFile: 'templates/index.ts.hbs'
       }
     ]
